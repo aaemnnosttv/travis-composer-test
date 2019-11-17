@@ -1,8 +1,12 @@
 language: php
-php:
-  - 7.3
-  - 7.2
-  - 7.1
+
+jobs:
+  include:
+    - os: linux
+    - os: linux
+      dist: xenial
+    - os: linux
+      dist: trusty
 
 script:
   - composer global config --list
